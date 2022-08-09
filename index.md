@@ -13,7 +13,7 @@ Lessons for each three are described below:
 
 To just get started not knowing where to begin do the Fundamental Introduction To Python:
 
-[Fundamentals Of Python](https://kode2go.github.io/python2go/)
+[Fundamentals Of Python](https://kode2go.github.io/python2go/python_lesson_1_intro.html)
 
 ## Data Science Stream
 
