@@ -66,6 +66,7 @@ Let us start off with some simple math commands. Note the Python convention for 
 | Subtraction  | 10 - 20 |
 | Multiplication  | 10*20  |
 | Division  | 10/20  |
+| Power  | 10**2  |
 | Assignment | x = 5  |
 
 See the interactive Python environment below where we have performed a few simple commands like using the `print` function to display something to the console, storing variables, and doing simple sums: 
@@ -75,69 +76,34 @@ See the interactive Python environment below where we have performed a few simpl
 
 Go ahead, and click on the `play` arrow to run the `main.py` script so you will see the output of the code in the `console` area. 
 
+Before we explain what the code does, try it out yourself. Add your own code at line 10 and below that will display the answer to the following:
 
-Now let us do a simple sum by entering the following:
-
-``` python
->>> 
->>> sum = x + y
->>> print(sum)
-42
->>>
-
+```python
+print(10 - 20)
+print(10*20)
+print(10/20)
+print(10**2)
 ```
 
+You should have gotten the following:
+
+![image](https://user-images.githubusercontent.com/29664888/183761199-1dd5637c-2b0b-4c75-8b4b-f5c2cf845d06.png)
+
 Let us take a step back and go through what we have done so far.
-First off, we did some basic math by adding two numbers. These types of numbers are also known as integers. You should have seen the answer as `42` which is an integer. We can also print or display that answer as text,  with `print(40+2)`. We also made a variable called `name` which stores the text ` “wabbit” `. Note the two exclamation marks “ ”, makes sure the variable is stored as text, again also known as a string.
-We then started assigning some variables like `x = 40` and `y = 2`. We can print out what those variables represent at any time if you just enter `x` and `y`. Then we made a sum as `sum = x + y` which we then printed out on the terminal using the `print` function: `print(sum)`.
+First off, we did some basic math by adding two numbers. These types of numbers are also known as integers. You should have seen the answer as `42` which is an integer. We can also print or display that answer as text,  with `print(40+2)`. We also made a variable called `name` which stores the text ` “Python” `. Note the two exclamation marks “ ”, makes sure the variable is stored as text, again also known as a string.
+We then started assigning some variables like `x = 40` and `y = 2`. We can print out what those variables represent at any time if you just enter `print(x)` and `print(y)`. Then we made a sum as `sum = x + y` which we then printed out on the terminal using the `print` function: `print(sum)`.
 
 # Python Print and Input Functions
 
-We can do many things with the `print()` function, more than we have done so far. We can print multiple lines of text using `\n` like this:
+We can do many things with the `print()` function, more than we have done so far. We can print multiple lines of text using `\n` and shapes as well. Run the code below to see what happens:
 
-```python
->>> print("this is line 1 \n this is line 2 \n")
-this is line 1
- this is line 2
->>>
-```
+<iframe src="https://trinket.io/embed/python3/3c49d9b0c4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-We can also print shapes:
 
-```python
->>> print("*****\n*****\n*****\n*****\n")
-*****
-*****
-*****
-*****
+We have seen now a few examples of how to output variables, values and text using the `print()` function. We can also do get data input as well using the `input()` function. Run the code below to see what happens:
 
->>>
-```
 
-We have seen now a few examples of how to output variables, values and text using the `print()` function. We can also do get data input as well using the `input()` function:
-
-```
->>> answer = input("What is the best programming language?")
-What is the best programming language?Python
->>> print(answer)
-Python
->>>
-```
-
-We can also get values as well but as you will learn you will need to convert the type to a number like using `int()`:
-
-```python
-
->>> answer = int(input("When was python invented?"))
-When was python invented?1980
->>> diff = 2022 - answer
->>> print(diff)
-42
->>>
-```
-
-If we did not use `int()` we would get an error.
-
+<iframe src="https://trinket.io/embed/python3/e20714271e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 # Python Interpreter
 
@@ -145,37 +111,34 @@ Note that Python reads your code sequentially from top to bottom.
 For example this works:
 
 ```python
-1. >>> 
-2. >>> mysum= 40 + 2
-3. >>> print(mysum)
-4. 42
+1. mysum= 40 + 2
+2. print(mysum)
 ```
 
-Python reads each line in order from line 1 to 4. However, this will not work:
+Python reads each line in order. However, this will not work as an error will show up:
+
 ```python
-1. >>>
-2. >>> print(mysum)
+1. print(mysum)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'mysum' is not defined
-3. >>>
 ```
 
-Since there is no variable that was declared before called mysum. You must declare or define it before you use it.
+Since there is no variable that was declared before called `mysum`. You must declare or define it before you use it.
 
 Well done! That’s it! You have been doing basic Python programming. 
 
-# Good Programming Habits
+# Good Programming Habits With Comments
 
 1. Add comments to each line of code explaining what it does. Also, any time you code a variable it is stored in memory. It is a good practice for beginners to write that out as a comment the line of code that declared the variable. 
+
 ```python
-1. >>> 
-2. >>> mysum= 40 + 2
-3. >>> #store the sum of two values (40 and 2) in the variable called mysum, in memory mysum = 42
-4. >>> print(mysum)
-5. 42
-6. >>> #print out the variable called mysum
+1. 
+2. mysum= 40 + 2
+3. #store the sum of two values (40 and 2) in the variable called mysum, in memory mysum = 42
+4. print(mysum)
 ```
+
 This is more applicable for larger programs as you will see later.
 
 # Summary
@@ -221,8 +184,5 @@ Other
 
 
 
-_yay_
-
-[back](./)
 
 
