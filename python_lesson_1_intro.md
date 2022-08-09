@@ -55,44 +55,9 @@ So these were simple tasks that were performed on this dataset and could be simi
 
 # Let’s get started
 
-So firstly we need to setup the Python environment we going to use to analyse this simple dataset. There are many ways to this and various applications and it is all up to your own preference. If you are use to using Matlab then using something like Spyder would seem very familiar to you:
+So firstly we need to setup the Python environment we going to use to analyse this simple dataset. We will be using https://trinket.io/features/python3 so you can practice and learn in the browser itself while learning. On the left-hand side you will write code and run it, then on the right-hand side you will see the output in the `console` area. There are also many other ways to write Python code. I suggest something like VS Code at a later stage once you are more comfortable with Python.
 
-If you want a more a involved coding environment then you can choose PyCharm:
-
-![image](https://user-images.githubusercontent.com/29664888/146560123-911ff622-3489-4fbd-8f0d-bccfefbc65df.png)
-
-or VS Code:
-
-![image](https://user-images.githubusercontent.com/29664888/146560264-1be64c00-0821-4c88-938c-e288acd14f07.png)
-
-Or can also use simple text editors like Sublime to run Python:
-
-![image](https://user-images.githubusercontent.com/29664888/146560408-047d4730-776a-42d9-90eb-6e74ccd60f2e.png)
-
-Or if you like using the terminal then go ahead and just install Python from it website:
-
-![image](https://user-images.githubusercontent.com/29664888/146560506-d4ad6407-f6f0-4683-8a8f-346c7cb827b2.png)
-
-
-For For the first few lessons we are going to be using a terminal using CoCal. Go to the link: https://cocalc.com/ and click on "Run CoCalc Now", then click on the "New" tab and select the "Linux terminal" option. You should then be presented with a linux terminal showing the "~$" prompt. 
-
-In the terminal you can check what version of Python you are running with:
-
-```
-~$ 
-~$ python --version
-Python 3.8.10
-~$ 
-```
-
-You can also use any other Linux terminal used in Windows, Linux, or MacOS. If you want to a full installation of Python on your computer follow this link: https://github.com/kode2go/python/wiki/A.1-Setup-Python-Environment
-
-## Step 1:
-Enter the following command in the Linux terminal: `python`. This will open up a Python interpreter. You will see the next line saying “Python 3.8.5 …“ which just tells us the Python version we are using. And the last line shows the `>>>` prompt which indicates that you have just started a new python environment called a Python interpreter. With these notes, make sure you only type out or copy any commands that are after the `>>>` prompt.
-
-![image](https://user-images.githubusercontent.com/63326895/107113430-8fe4f880-6867-11eb-90cf-40f3708d5026.png)
-
-## Step 2:
+## Simple Math Examples:
 Let us start off with some simple math commands. Note the Python convention for math operations below.
 
 | Math Operator  | Example |
@@ -103,25 +68,13 @@ Let us start off with some simple math commands. Note the Python convention for 
 | Division  | 10/20  |
 | Assignment | x = 5  |
 
-Type out the following commands in the Python interpreter and press the “Enter” key and you should see the follow responses from the Python interpreter: 
+See the interactive Python environment below where we have performed a few simple commands like using the `print` function to display something to the console, storing variables, and doing simple sums: 
 
-``` python
->>> 
->>> 40 + 2
-42
->>> print(40+2)
-42
->>> name = "python"
->>> print(name)
-python
->>> x = 40
->>> y = 2
->>> x
-40
->>> y
-2
->>> 
-```
+
+<iframe src="https://trinket.io/embed/python3/746dd7a5b9" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+Go ahead, and click on the `play` arrow to run the `main.py` script so you will see the output of the code in the `console` area. 
+
 
 Now let us do a simple sum by entering the following:
 
