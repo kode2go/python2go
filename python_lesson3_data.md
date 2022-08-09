@@ -239,3 +239,19 @@ As you model more complicated things, you may find you need dictionaries and lis
 
 Because dictionaries are not ordered, they can’t be sliced like lists.
 Though dictionaries are not ordered, the fact that you can have arbitrary values for the keys allows you to organize your data in powerful ways. 
+
+## Extra
+
+Look at frequency of numbers in a list without knowing the numbers - loop
+
+dir(mylist) very useful
+
+
+>>> import builtins
+>>> dir(builtins)
+
+
+import types
+
+builtin_function_names = [name for name, obj in vars(builtins).items() 
+                          if isinstance(obj, types.BuiltinFunctionType)]
