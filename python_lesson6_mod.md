@@ -1,0 +1,159 @@
+* TOC
+{:toc}
+
+# Python Modules & Functions
+
+Up to now we have covered the basic principles of Python programming. The next few topics are supplementary topics that will help you program more efficiently and effectively. 
+We have been coding certain commands and functions in the Python interpreter. However, we haven’t really been able to reuse the code. That is where this section comes in. We will focus on three ways that code is reused. The first is using functions, the second is using a Python file, and the third is a module. Method two and three are somewhat related.
+Functions
+
+A function is a block of code which only runs when it is called. You can pass it data, it performs certain tasks, and the returns a result. We have been using functions since we began this course. These are some of the functions you have already used:
+
+•	`print()`
+
+•	`len()`
+
+•	`type()`
+
+You can always recognise a function as it has a `()` at the end of the word!
+
+Let us create our own function. If we were to add two numbers and print the result, we would do it in the following way:
+```python
+>>> 
+>>> num1 = 40
+>>> num2 = 2
+>>> sum = num1 + num2
+>>> print(sum)
+42
+>>> 
+```
+
+But now if we want to do another sum with maybe different numbers we have to write out these 4 lines of code again. Whereas with a function we create a template of what these 4 lines do and makes it generic. Then to use it, we call the function with just need 1 line of code that contains the 2 numbers we want to add, and the function will return the result. How do we do this:
+```python 
+>>> def my_function_sum(number1, number2):
+...  sum_var = number1 + number2
+...  print(sum_var)
+... 
+>>> 
+>>> my_function_sum(40,2)
+42
+>>> 
+```
+
+Clean, simple, and efficient! 
+If we have a lot more functions and code that we want to reuse we can put that a Python file. To do that we first create a Python file, then using your text editor like Sublime write some code in it and then we can run it.
+
+The code:
+
+```python
+print("Python To GO!")
+```
+Now let us do a more involved example. Let us create a simple addition calculator. 
+We first create a file and add the following code:
+```python
+print("Simple Addition Calculator")
+print("Enter your first number: ")
+num1 = input()
+print("Enter your second number: ")
+num2 = input()
+sum = float(num1) + float(num2)
+print("The answer to: " + str(num1) + " + " + str(num2) + " is: " +str(sum))
+```
+
+Now if we run the Python file:
+```python 
+Simple Addition Calculator
+Enter your first number: 
+40
+Enter your second number: 
+2
+The answer to: 40 + 2 is: 42.0
+~$ 
+```
+We can take this even further. What happens if we want to use a Python file that performs certain generic functions that we can use. This type of file call a module and a collection of modules we call libraries.
+Let us first create our own module. To do this, we first create two files, one called “my_sum_module.py” and the other called “my_main_program.py”
+
+In the editor, add the following code for each file:
+my_sum_module.py:
+```python
+
+# This function adds two numbers together
+
+def sum_func():
+    print("Simple Addition Calculator")
+    print("Enter your first number: ")
+    num1 = input()
+    print("Enter your second number: ")
+    num2 = input()
+    sum = float(num1) + float(num2)
+    print("The answer to: " + str(num1) + " + " + str(num2) + " is: " +str(sum))
+```
+
+my_main_file.py:
+
+```python
+
+import my_sum_module
+
+print("Start Program")
+
+my_sum_module.sum_func()
+~$
+```
+Now run the my_main_file.py 
+```python
+Start Program
+Simple Addition Calculator
+Enter your first number: 
+10
+Enter your second number: 
+2
+The answer to: 10 + 2 is: 12.0
+~$
+```
+So what happened was that Python ran the file called “my_main_file.py” and it first imported the “my_sum_module”, it then printed out “Start Program” and then it executed the function “sum_func” that is within “my_sum_module”. If you have understood this, then you have understood the basic architecture of most Python programs.
+One new feature that we have added at the top of “my_sum_module.py: “ is:
+
+`# This function adds two numbers together`
+
+Any Python code that starts with the “#” symbol will result in the text after that being a comment. As it has no programming effect, it is just there for information.
+Python has many built in modules that you can also import and install from the internet. For example if you wanted to install the module called “numpy” you would enter the following in the Linux terminal.
+`~$ pip install numpy `
+
+An example of a built-in module is called “platform” and you can use it like this:
+```python
+>>> import platform
+>>> x = platform.system()
+>>> print(x)
+Linux
+>>> 
+```
+
+You can also give the module an alias with a shorter name like:
+```python
+>>> import platform as plt
+>>> x = plt.system()
+>>> print(x)
+Linux 
+```
+
+# Plotting
+
+```python
+import matplotlib.pyplot as plt
+
+mylist = [1,2,3,4,5]
+mylist2 = [-1,-2,-3,-4,-5]
+
+plt.plot(mylist , ls= 'dotted', color = 'r',linewidth = '10')
+plt.plot(mylist2 , ls= 'dotted', color = 'b',linewidth = '10')
+
+plt.xlabel("X Label")
+plt.ylabel("Y Label")
+plt.title("My Title")
+plt.legend(['mylist','mylist2'])
+
+plt.show()
+```
+![image](https://user-images.githubusercontent.com/29664888/172614026-c69f0d75-b350-44b1-9bcc-adcb5c561886.png)
+
