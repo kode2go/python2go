@@ -2,6 +2,9 @@
 layout: default
 ---
 
+* TOC
+{:toc}
+
 # Introduction
 
 Welcome to this Python programming tutorial. In this tutorial we will be focusing on an introduction to Python programming. We assume that you have no background in Python programming so this course will cover the fundamental principles. 
