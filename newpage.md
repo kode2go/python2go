@@ -1,5 +1,3 @@
-<a name="top"></a>
-
 ---
 layout: default
 ---
@@ -274,4 +272,4 @@ _yay_
 
 [back](./)
 
-<a href="#top">Back to top of page</a>
+
