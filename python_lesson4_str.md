@@ -84,6 +84,8 @@ print(mystring.upper())
 print(mystring.replace('P','Q'))
 ```
 
+Run the code to see the output you get.
+
 # Summary
 
 This brings us to the end of the lesson. On to the next one.
