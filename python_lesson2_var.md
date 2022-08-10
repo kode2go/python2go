@@ -1,6 +1,12 @@
 * TOC
 {:toc}
 
+# Interactive Area
+
+Any code that is shown can be run here. Simply copy and paste it below and run it:
+
+<iframe src="https://trinket.io/embed/python3/f50bd1d6e4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
 # Naming Variables
 
 It is recommended that when naming variables you follow the following rules:
@@ -33,7 +39,31 @@ There is one more type that we will use often which is a float or a variable num
 
 We can determine what types of variables we have using the built-in `type()` function. Let us first check what type of variable x is by running the file below:
 
-<iframe src="https://trinket.io/embed/python3/263d9d4024" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Variables
+# An integer:
+x = 40
+print(x)
+print(type(x))
+
+# A float:
+x = 40.2
+print(x)
+print(type(x))
+
+# String examples:
+x = "P"
+print(x)
+print(type(x))
+
+x = "Python"
+print(x)
+print(type(x))
+
+x = "Python course"
+print(x)
+print(type(x))
+```
 
 You get back `<class 'int'>` which tells us this variable is an integer, `<class 'float'>` for the number that has decimals and then `<class 'str'>` for the variables that had text.
 
@@ -47,11 +77,31 @@ Many types you would want to change the data type. For example if you are readin
 
 This conversion process is called casting. Let us look at an example below:
 
-<iframe src="https://trinket.io/embed/python3/2bd71b33e7" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Converting variables
+# the integer number 42 stay an integer
+x = int(42)
+# the integer number 42 is converted to a string
+y = str(42)
+# the integer number 42 is converted to a float number
+z = float(42)
+# the float number is converter to an integer
+a = int(42.0)
+print(x)
+print(y)
+print(z)
+print(a)
+print(type(y))
+```
 
 One useful feature of casting is when you want to use numbers with the `print` function. Usually, the `print` functions converts everything inside the brackets to a string. However, if you want output some text with an integer variable you will need to use the `F-format` feature. If you use the `f` letter inside the `print` function you can use variable numbers with text where the variables are inside curly brackets `{}`. Run the example below:
 
-<iframe src="https://trinket.io/embed/python3/832a501a2a" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Printing variables
+date = 1989
+
+print(f"Python was created in: {date}")
+```
 
 # The Excel Dataset
 
@@ -66,13 +116,32 @@ Now there are two ways of doing this. The better approach is just to import this
 Just like in excel where we are storing numbers in cells we can also store numbers in Python as variables. So for example we have at cell B2 is equal to 30, cell B3 is equal to 40, and so on. Run the code below:
 
 
-<iframe src="https://trinket.io/embed/python3/48fd30238b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Storing Data
+B1 = 30
+B2 = 40
+B3 = 30
+B4 = 49
+print(B1)
+print(B2)
+
+```
 
 Try storing the rest of the variables that we got from the excel dataset in column B and print them out too.
 
 Now to store each value in a separate variable is a tedious process especially if we want to get some statistics from it. So let us rather use a variable that can store multiple values. There are many of these in Python, for now we are going to use one called a `list`. And a `list` is defined by square `[]` brackets with the values inside the square brackets separated by commas. We can also give a `list` a unique name. Let us call it `age` to match the excel column B dataset and do it as follows:
 
-<iframe src="https://trinket.io/embed/python3/4e75b484fa" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Using Lists
+age = [30,40,30,49,22,35,22,46,29,25,39]
+print(age)
+# Lists indexes start at 0 which has the value of 30
+print(age[0])
+print(age[1])
+print(age[10])
+# This will give an error as there is no value at index 11
+print(age[11])
+```
 
 This looks a lot better. We can store all those values of age in a `list` data type called `age`:
 
@@ -88,21 +157,42 @@ If you try to access the index at 11 you will get the error `list index out of r
 
 Now we use some built in Python functions to get the same statistics we got in excel as shown below. Run the code below:
 
-
-<iframe src="https://trinket.io/embed/python3/59f4ac2759" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Basic Stats
+age = [30,40,30,49,22,35,22,46,29,25,39]
+print(min(age))
+print(max(age))
+print(len(age))
+print(sum(age))
+average = sum(age)/len(age)
+print(average)
+```
 
 So the cool thing is we can use the built in functions `min`, `max`, `len`, and `sum` to get the minimum and maximum number, the length of the list, and the sum of all the numbers. Thereafter, we can easily get the average. We will look at more of a manual approach later instead of using these functions. However, you will need to learn a little more do that. We will look at getting standard deviation a little later as well.
 
 Let us now record all the information in other columns in lists too. So in the excel data set we have column C that holds Gender values for M (male) and F (female). Like before we can store the variables individually based on the cells. Run the code below:
 
 
-<iframe src="https://trinket.io/embed/python3/27e4b9f970" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Storing Text
+C2 = M
+C3 = M
+C4 = F
+```
 
 
 But wait! Its giving us an error `name 'M' is not defined` Why is that? Any letters, words, group of words fall under the category of a `string` data type. Therefore we need to add `"` to the beginning and end. Run the code below:
 
 
-<iframe src="https://trinket.io/embed/python3/dcae186896" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Storing Text
+C2 = "M"
+C3 = "M"
+C4 = "F"
+print(C2)
+print(C3)
+print(C4)
+```
 
 
 Again this is a tedious task so let us create a `list` for gender:
@@ -114,7 +204,14 @@ gender = ["M","M","F","M","F","F","F","M","M","F","M"]
 Run the code below:
 
 
-<iframe src="https://trinket.io/embed/python3/8cc9438d33" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Storing Text
+gender = ["M","M","F","M","F","F","F","M","M","F","M"]
+print(gender[0])
+print(gender[1])
+print(gender[2])
+print(gender[-1])
+```
 
 
 This is the same as before. we can access individual values starting with index = 0 for the first value. A nice feature of Python is that you can access the last value in the list by setting the index = -1.
@@ -127,7 +224,13 @@ country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Moza
 
 Run the code below:
 
-<iframe src="https://trinket.io/embed/python3/9b983558e4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Storing Country Values
+country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
+print(country)
+print(country[0])
+print(country[5])
+```
 
 
 # Summary
