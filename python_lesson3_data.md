@@ -1,13 +1,23 @@
 * TOC
 {:toc}
 
+# Interactive Area
+
+Any code that is shown can be run here. Simply copy and paste it below and run it:
+
+<iframe src="https://trinket.io/embed/python3/f50bd1d6e4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
 # Data Storage With Lists
 
 Lists have many features. We will be covering some of them in this lesson. 
 
 A list can also contain all kinds of data types:
 
-<iframe src="https://trinket.io/embed/python3/51e9ca3fc4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Data Storage With Lists
+my_list = [42, -2021, 6.283,"tau", "node"]
+print(my_list) 
+```
 
 We can do many things with lists:
 - print all the items in the `list` using `[:]`
@@ -21,7 +31,24 @@ We can do many things with lists:
 
 Let us see some examples of this. Run the code below:
 
-<iframe src="https://trinket.io/embed/python3/c9daf01a5f" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Data Storage With Lists
+my_list = [42, -2021, 6.283,"tau", "node"]
+print(my_list) 
+
+print(my_list[:])
+my_list.append("pi")
+print(my_list)
+my_list.insert(1,"pi2")
+print(my_list)
+my_list.remove("pi")
+my_list.remove("pi2")
+my_list.remove("tau")
+print(my_list)
+print(len(my_list))
+# View a certain range of items:
+print(my_list[0:3]) 
+```
 
 When we are getting only a certain range of values from a list we call this list slicing.
 We can do a lot of cool things with lists like sorting, and joining. Please note, like with any tool, this data type has its
@@ -35,25 +62,86 @@ Now we will be continuing with the excel dataset that we used in the previous le
 
 For now, we will be focusing on more features regarding the list data type as it will teach you the most important principles about storing multiple variables. A few more built in functions of lists are shown below. The first being `count` which count how many times that value is in the list: 
 
-<iframe src="https://trinket.io/embed/python3/59e8303696" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Data Storage With Lists
+age = [30,40,30,49,22,35,22,46,29,25,39]
+print(age)
+
+print(age.count(49))
+print(age.count(2))
+print(age.count(30)) 
+```
 
 > Exercise: Using the `count` function check how many times the number 22 is in the age list
 
 We can also reverse the items in a list, copy a list, and add lists together as shown below:
 
 
-<iframe src="https://trinket.io/embed/python3/b618adee97" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Data Storage With Lists
+age = [30,40,30,49,22,35,22,46,29,25,39]
+print(age)
+
+# reverse a list
+age.reverse()
+print("reversed list: ", age)
+age.reverse()
+# copy a list
+age_new = age.copy()
+print("copied list: ", age_new)
+# clear a list
+age_new.clear()
+print("cleared list: ", age_new)
+# add lists together
+age_new = age.copy()
+add_list = age + age_new
+print("added lists: ", add_list) 
+```
 
 Lastly, we can also sort values in a list
 
-<iframe src="https://trinket.io/embed/python3/9e9a7fbb6c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Data Storage With Lists
+age = [30,40,30,49,22,35,22,46,29,25,39]
+print(age)
+
+# Sort age in ascending order
+age.sort()
+print("sorted age (asc): ",age)
+# Sort age in descending orde
+age.sort(reverse=True)
+print("sorted age (des): ",age) 
+```
 
 ## Grouping Lists
 
 As I mentioned before a list can contain various kinds of types, even a list itself. What you see below is we are storing the lists `age`, `gender`, and `country` inside `group_lists`:
 
 
-<iframe src="https://trinket.io/embed/python3/25dc43eae4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+```python
+# Grouped Lists
+age = [30,40,30,49,22,35,22,46,29,25,39]
+gender = ["M","M","F","M","F","F","F","M","M","F","M"]
+country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
+
+group_lists = [age,gender,country]
+# Display all the lists
+print("group lists: ",group_lists)
+# Only show the first list
+print("group lists[0]: ",group_lists[0])
+# Only show the second list
+print("group lists[1]: ",group_lists[1])
+# Only show the third list
+print("group lists[2]: ",group_lists[2])
+# Only show the first value in the first list
+print("group lists[0][0]: ",group_lists[0][0])
+# Only show the second value in the first list
+print("group lists[0][1]: ",group_lists[0][1])
+# Only show the first value in the second list
+print("group lists[1][0]: ",group_lists[1][0])
+# Show all the values in the second list
+print("group lists[1][:]: ",group_lists[1][:]) 
+```
 
 > Exercise: From the variable `group_lists` display the last value in the third list.
 
@@ -64,8 +152,19 @@ unordered data type that is structured using keys and values and is defined with
 brackets `{}`. Where keys are like the column names and values are the lists of data. See the
 example below by running the code:
 
+```python
+# Dictionaries
 
-<iframe src="https://trinket.io/embed/python3/2f7ce07cb2" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+age = [30,40,30,49,22,35,22,46,29,25,39]
+gender = ["M","M","F","M","F","F","F","M","M","F","M"]
+country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
+
+
+dict_dataset = {'age': age,'gender': gender,'country':country}
+print(dict_dataset.keys())
+print(dict_dataset.values())
+print(dict_dataset['age'][0])
+```
 
 
 > Exercise: Can you print out all the values for gender?
