@@ -3,29 +3,7 @@
 
 # Variables
 
-In the previous we lesson we did a few examples with variables. For example: 
-
-``` python
-~$ python
-Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
-[GCC 9.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> 
->>> 
->>> x = 40
->>> y = 2
->>> name = "python"
->>> sum = x + y
->>> sum
-42
->>> print(sum)
-42
-
-```
-
-
-
-We learnt about two types of variables which is an integer and a string. 
+In the previous we lesson we did a few examples with variables. We learnt about two types of variables which is an integer and a string. 
 
 Now let us look at our excel dataset again:
 
@@ -35,121 +13,69 @@ The first thing we wanted to do was get some statistics on the age column, like 
 
 Now there are two ways of doing this. The better approach is just to import this excel file into Python and then find the metrics. The second way and longer way is to input the data ourselves. We will be doing the latter in order to understand the Python principles of variables and data types. 
 
-Just like in excel where we are storing numbers in cells we can also store numbers in Python as variables. So for example we have at cell B2 is equal to 30, cell B3 is equal to 40, and so on. We can do the same in Python:
+Just like in excel where we are storing numbers in cells we can also store numbers in Python as variables. So for example we have at cell B2 is equal to 30, cell B3 is equal to 40, and so on. Run the code below:
+
+
+<iframe src="https://trinket.io/embed/python3/48fd30238b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+Try storing the rest of the variables that we got from the excel dataset in column B and print them out too.
+
+Now to store each value in a separate variable is a tedious process especially if we want to get some statistics from it. So let us rather use a variable that can store multiple values. There are many of these in Python, for now we are going to use one called a `list`. And a `list` is defined by square `[]` brackets with the values inside the square brackets separated by commas. We can also give a `list` a unique name. Let us call it `age` to match the excel column B dataset and do it as follows:
+
+<iframe src="https://trinket.io/embed/python3/4e75b484fa" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+This looks a lot better. We can store all those values of age in a `list` data type called `age`:
 
 ```python
->>>
->>> B1 = 30
->>> B2 = 40
->>> B3 = 30
->>> B4 = 49
->>> B1
-30
->>> print(B2)
-40
->>>
+age = [30,40,30,49,22,35,22,46,29,25,39]
 ```
 
-But this is a bit tedious to define a new variable for each new variable especially if we want to get some statistics from it. So let us rather use a variable that can store multiple values. There are many of these in Python, for now we are going to use one called a `list`. And a list is defined by [] brackets with the values inside the square brackets. We can also give a `list` a unique name. Let us call it `age` to match the excel dataset and do it as follows:
+Take note that to access any of the values all we need to do is use `age[index]`. Where `index` refers to the location in the `list` datatype. Note, the first value is stored at index 0 not 1. The second value is stored at index 1 and so on. The last value is stored at index 10. If you try to access the index at 11 you will get the error `list index out of range`. See the excel data set again and look at column A called `index` to see how the values are stored. 
 
-```python
->>> age = [30,40,30,49,22,35,22,46,29,25,39]
->>> print(age)
-[30, 40, 30, 49, 22, 35, 22, 46, 29, 25, 39]
->>> age[0]
-30
->>> age[1]
-40
->>> age[10]
-39
->>> age[11]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-IndexError: list index out of range
->>>
-```
+Now we use some built in Python functions to get the same statistics we got in excel as shown below. Run the code below:
 
-This looks a lot better. We can store all those values of age in a `list` data type called `age`. Take note that to access any of the values all we need to do is use `age[index]`. Where `index` refers to the location in the `list` datatype. Note, the first value is stored at index 0 not 1. The second value is stored at index 1 and so on. The last value is stored at index 10. If you try to access the index at 11 you will get the error `list index out of range`. See the excel data set again and look at column A called `index` to see how the values are stored. 
 
-Now we use some built in Python functions to get the same statistics we got in excel as shown below:
-
-```python
->>> min(age)
-22
->>> max(age)
-49
->>> len(age)
-11
->>> sum(age)
-367
->>> average = sum(age)/len(age)
->>> average
-33.36363636363637
->>>
-
-```
+<iframe src="https://trinket.io/embed/python3/59f4ac2759" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 So the cool thing is we can use the built in functions `min`, `max`, `len`, and `sum` to get the minimum and maximum number, the length of the list, and the sum of all the numbers. Thereafter, we can easily get the average. We will look at more of a manual approach later instead of using these functions. However, you will need to learn a little more do that. We will look at getting standard deviation a little later as well.
 
-Let us now record all the information in other columns in lists too. So in the excel data set we have column C that holds Gender values for M (male) and F (female). Like before we can store the variables individually based on the cells:
+Let us now record all the information in other columns in lists too. So in the excel data set we have column C that holds Gender values for M (male) and F (female). Like before we can store the variables individually based on the cells. Run the code below:
+
+
+<iframe src="https://trinket.io/embed/python3/27e4b9f970" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
+But wait! Its giving us an error `name 'M' is not defined` Why is that? Any letters, words, group of words fall under the category of a `string` data type. Therefore we need to add `"` to the beginning and end. Run the code below:
+
+
+<iframe src="https://trinket.io/embed/python3/dcae186896" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
+Again this is a tedious task so let us create a `list` for gender:
 
 ```python
->>>
->>> C2 = M
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'M' is not defined
->>> C3 = M
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'M' is not defined
->>> C4 = F
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'F' is not defined
->>>
+gender = ["M","M","F","M","F","F","F","M","M","F","M"]
 ```
 
-But wait! Its giving us errors. Why is that? Any letters, words, group of words fall under the category of a `string` data type. Therefore we need to add `"` to the beginning and end like so:
+Run the code below:
+
+
+<iframe src="https://trinket.io/embed/python3/8cc9438d33" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
+This is the same as before. we can access individual values starting with index = 0 for the first value. A nice feature of Python is that you can access the last value in the list by setting the index = -1.
+
+Lastly, we can do the same for the country column and just make a `list`. Note, country values are strings as its words or groups of words:
 
 ```python
->>> C2 = "M"
->>> C3 = "M"
->>> C4 = "F"
->>> C2
-'M'
->>> C3
-'M'
->>> C4
-'F'
->>>
+country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
 ```
 
-Again this is a tedious task so let us create a list for gender:
+Run the code below:
 
-```python
->>> gender = ["M","M","F","M","F","F","F","M","M","F","M"]
->>> gender[0]
-'M'
->>> gender[-1]
-'M'
->>>
-```
+<iframe src="https://trinket.io/embed/python3/9b983558e4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-Same as before we can access individual values starting with index = 0 for the first value. A nice feature of Python is that you can access the last value in the list by setting the index = -1.
 
-Lastly, we can do the same for country column and just make a list. Note, country is string as its words or groups of words:
-
-```python
->>> country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
->>> country
-['South Africa', 'Botswana', 'South Africa', 'South Africa', 'Kenya', 'Mozambique', 'Lesotho', 'Kenya', 'Kenya', 'Egypt', 'Sudan']
->>> country[0]
-'South Africa'
->>> country[5]
-'Mozambique'
->>>
-```
 ## Different Data Types
 
 We always need to understand what kind of data do we want to store. Well in previous example we know we are dealing with age which is a number. Python distinguishes between to types of numbers. The first first is called an `int` or integer which is any non-decimal number like 5, 2021, or -256. The other data type is called a `float` or floating point number which is any decimal number like 0.5, -34.56, and 3.1451245. You saw when we worked out the average for `age` we got a number with decimals which means Python will store it as a `float`.
