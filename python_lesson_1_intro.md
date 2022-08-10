@@ -55,7 +55,11 @@ So these were simple tasks that were performed on this dataset and could be simi
 
 # Let’s get started
 
-So firstly we need to setup the Python environment we going to use to analyse this simple dataset. We will be using https://trinket.io/features/python3 so you can practice and learn in the browser itself while learning. On the left-hand side you will write code and run it, then on the right-hand side you will see the output in the `console` area. There are also many other ways to write Python code. I suggest something like VS Code at a later stage once you are more comfortable with Python.
+So firstly we need to setup the Python environment we going to use to analyse this simple dataset. We will be using https://trinket.io/features/python3 so you can practice and learn in the browser itself while learning. Using Chrome is preferred. 
+
+![image](https://user-images.githubusercontent.com/29664888/183817437-c57005a7-48f1-4398-944b-d6028c58b294.png)
+
+On the left-hand side you will write code and run it, then on the right-hand side you will see the output in the `console` area. During this course you will be asked to `Run` the code by clicking the on the `Run` arrow above the `main.py` file name. You will also be asked to input your own code and run it. Chrome is suggested to use, although other browsers work too. Firefox requires yout to first click on somewhere outside the interactive window before you click on `Run`. There are also many other ways to write Python code. I suggest something like VS Code at a later stage once you are more comfortable with Python.
 
 ## Simple Math Examples:
 Let us start off with some simple math commands. Note the Python convention for math operations below.
