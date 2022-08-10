@@ -3,7 +3,33 @@
 
 # Variables
 
-In the previous we lesson we did a few examples with variables. We learnt about two types of variables which is an integer and a string. 
+In the previous we lesson we did a few examples with variables. We learnt about two types of variables which is an integer and a string. And integer or `int` refers to whole numbers that are either positive or negative for example 5, 2021, or -256. A string refers to any text. That can be a single character, word, or groups of words.
+
+There is one more type that we will use often which is a float or a variable number that has decimals. The `float` or floating point number is any decimal number like 0.5, -34.56, and 3.1451245. 
+
+We can determine what types of variables we have using the built-in `type()` function. Let us first check what type of variable x is by running the file below:
+
+<iframe src="https://trinket.io/embed/python3/263d9d4024" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+You get back `<class 'int'>` which tells us this variable is an integer, `<class 'float'>` for the number that has decimals and then `<class 'str'>` for the variables that had text.
+
+# Changing Between Variable Data Types
+
+Many types you would want to change the data type. For example if you are reading in data from an excel, csv, or text file it a number may be stored as text. So we can convert that to an integer or float if we want to do some calculations or statistics with it. We do that using the built-in Python functions:
+
+- `int()` converts to an intger
+- `float()` converts to a float
+- `str()` converts to a string 
+
+This conversion process is called casting. Let us look at an example below:
+
+<iframe src="https://trinket.io/embed/python3/2bd71b33e7" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+One useful feature of casting is when you want to use numbers with the `print` function. Usually, the `print` functions converts everything inside the brackets to a string. However, if you want output some text with an integer variable you will need to use the `F-format` feature. If you use the `f` letter inside the `print` function you can use variable numbers with text where the variables are inside curly brackets `{}`. Run the example below:
+
+<iframe src="https://trinket.io/embed/python3/832a501a2a" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+# The Excel Dataset
 
 Now let us look at our excel dataset again:
 
@@ -30,7 +56,11 @@ This looks a lot better. We can store all those values of age in a `list` data t
 age = [30,40,30,49,22,35,22,46,29,25,39]
 ```
 
-Take note that to access any of the values all we need to do is use `age[index]`. Where `index` refers to the location in the `list` datatype. Note, the first value is stored at index 0 not 1. The second value is stored at index 1 and so on. The last value is stored at index 10. If you try to access the index at 11 you will get the error `list index out of range`. See the excel data set again and look at column A called `index` to see how the values are stored. 
+Take note that to access any of the values all we need to do is use `age[index]`. Where `index` refers to the location in the `list` datatype. Note, the first value is stored at index 0 not 1. The second value is stored at index 1 and so on. The last value is stored at index 10:
+
+![image](https://user-images.githubusercontent.com/29664888/183818288-4c43ae67-47f8-462f-b11e-d6683acbd41c.png)
+
+If you try to access the index at 11 you will get the error `list index out of range`. See the excel data set again and look at column A called `index` to see how the values are stored. 
 
 Now we use some built in Python functions to get the same statistics we got in excel as shown below. Run the code below:
 
@@ -75,106 +105,6 @@ Run the code below:
 
 <iframe src="https://trinket.io/embed/python3/9b983558e4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-
-## Different Data Types
-
-We always need to understand what kind of data do we want to store. Well in previous example we know we are dealing with age which is a number. Python distinguishes between to types of numbers. The first first is called an `int` or integer which is any non-decimal number like 5, 2021, or -256. The other data type is called a `float` or floating point number which is any decimal number like 0.5, -34.56, and 3.1451245. You saw when we worked out the average for `age` we got a number with decimals which means Python will store it as a `float`.
-
-In Python we don’t need to declare variable types, like in most other programming languages. They can change their type as well through casting. Let us first check what type of variable `x` is by entering the following: 
-
-``` python
->>> print(type(x))
-<class 'int'>
->>>
-
-```
-You get back `<class ‘int’>` which tells us this variable is an integer. Let us now change that variable to a float by entering the following:
-
-``` python
->>> x = 40.2
->>> print(type(x))
-<class 'float'>
->>> 
-```
-
-Now the type of the variable has changed to a float. 
-
-Another piece of information you should take note of is that with strings the text that you want to store in a variable should be enclosed by either a single or double quote. 
-If we want to print string variables using the `print()` function it would look like this:
-
-``` python
->>> course = "Python was creating in the 1980s"
->>> 
->>> print("When was Python created?  " + course)
-When was Python created? Python was creating in the 1980s
->>> 
-```
-
-You can do the same with numbers:
-``` python
->>> 
->>> year_created = 1980
->>> 
->>> print("Year created is in: " + year_created )
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: can only concatenate str (not "int") to str
->>> 
-
-```
-
-Oh no, it seems we ran into an error! It is telling us that `year_created` is of type `int` or integer and it needs to be a type `str` or string. So now all we need to do is cast the variable into a string as shown:
-
-``` python
->>> print("Year created is in: " + str(year_created))
-Year created is in: 1980
->>> 
-```
-
-If we want to cast to an integer we use `int()`, for a float we use `float()` and for a string we use `str()`. 
-The one last data type is a Boolean type. This type of variables holds either a True or False value.
-
-As we saw in the previous section, you can change the type of a variable, by using type casting. That is, we can make a string into an integer and an integer into a string! Using the functions `int()`, `float()`, and `str()`.
-For example, enter the following:
- 
-``` python
->>> 
->>> x = int(42)
->>> x
-42
->>> y = str(42)
->>> y
-'42'
->>> z = float(42)
->>> z
-42.0
->>> a = int(42.0)
->>> a
-42
->>> print(type(y))
-<class 'str'>
->>>
-```
-
-Now when we made `y = str(42)`  we took an integer type and made it into a string type. You can see this when we said `print(type(y))`. 
-
-# Global vs Local Variables
-Variables have scope, that means they can be accessed globally or locally. Globally means the variables can be accessed anywhere in the code. Locally means it can only be accessed in certain parts of your code, for example in a function, loop or condition. Here is an example below.
-
-```python
-total = 0; # This is global variable.
-# Function definition is here
-def sum( arg1, arg2 ):
-   # Add both the parameters and return them."
-   total = arg1 + arg2; # Here total is local variable.
-   print "Inside the function local total : ", total
-   return total;
-# Now you can call sum function
-sum( 10, 20 );
-print "Outside the function global total : ", total
-```
-
-We will go into functions more later.
 
 # Summary
 
