@@ -28,10 +28,9 @@ We first need to know how to loop through a list. Why do we need to use loops? I
 
 ```python
 index = [0,1,2,3,4,5,6,7,8,9,10]
->>>
 ```
 
-or using append we first need to create an empty list using `[]`:
+or using `append` we first need to create an empty `list` using `[]`:
 
 ```python
 index = []
@@ -64,7 +63,6 @@ This is called a `for` loop, the other common type is called a `while` loop. The
 4. Thereafter you need a colon `:` and then press `Enter` to go to the next line
 5. If you are using a text editor that recognizes Python you should see the next line indented usually by 4 spaces. If not, then you must manually add those spaces. This is a very important as this allows Python to know you are running local code specific to the for loop only.
 6. So the loop now increments the variable i from 0 to 10. Through each iteration it stores the new value `i` into the `index` list
-
 
 
 
