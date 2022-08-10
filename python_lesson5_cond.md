@@ -1,6 +1,14 @@
 * TOC
 {:toc}
 
+
+# Interactive Area
+
+Any code that is shown can be run here. Simply copy and paste it below and run it:
+
+<iframe src="https://trinket.io/embed/python3/055c60f8a0" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
 # Conditional Statements & Loops
 
 **Note, for this section onwards it is better to use a Python text editor, check out Appendix A for more details, https://github.com/kode2go/python/wiki/A.-Creating-and-Running-Python-Files**
