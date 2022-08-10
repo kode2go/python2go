@@ -1,7 +1,31 @@
 * TOC
 {:toc}
 
-# Variables
+# Naming Variables
+
+It is recommended that when naming variables you follow the following rules:
+1. A variable can have a short name like `x` or `y` or more descriptive ones like `age`, `my_age`, `country_list`.
+2. A variable must start with a letter or underscore
+3. A variable cannot start with a number
+4. A variable can only contain alpha-numeric characters and underscores
+5. A variable name is case-sensitive: `age`, `Age`, and `AGE` are all different variable names
+
+```python
+# Valid Names
+x = 50
+age = 50
+_age = 50
+my_age = 50
+mYagE = 50
+my_age_2 = 50
+
+# Invalid names
+2age = 50
+my age = 50
+my-age = 50
+```
+
+# Variable Types
 
 In the previous we lesson we did a few examples with variables. We learnt about two types of variables which is an integer and a string. And integer or `int` refers to whole numbers that are either positive or negative for example 5, 2021, or -256. A string refers to any text. That can be a single character, word, or groups of words.
 
