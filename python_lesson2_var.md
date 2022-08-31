@@ -232,6 +232,14 @@ print(country[0])
 print(country[5])
 ```
 
+Find the minimum and maxiumum for the country list based on the number of characters:
+
+```python
+country = ["South Africa","Botswana","South Africa","South Africa","Kenya","Mozambique","Lesotho","Kenya","Kenya","Egypt","Sudan"]
+print(min(country,key=len))
+print(max(country,key=len))
+```
+
 
 # Summary
 
