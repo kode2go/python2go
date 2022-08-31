@@ -240,6 +240,29 @@ print(min(country,key=len))
 print(max(country,key=len))
 ```
 
+# Extra
+
+If you want to see all the general built-in functions try out the following code:
+```python
+# Shows all the names of built-in functions
+import builtins
+print(dir(builtins))
+
+import types
+builtin_function_names = [name for name, obj in vars(builtins).items() 
+                          if isinstance(obj, types.BuiltinFunctionType)]
+print(builtin_function_names)
+```
+
+If you want to know about all the built-in functions for a data type you can do the following:
+
+```python
+# Shows all the built-in functions for a list:
+dir(country)
+
+```
+
+
 
 # Summary
 
