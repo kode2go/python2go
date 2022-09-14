@@ -25,7 +25,6 @@ In other programming languages single characters like “b“ or “4“ are a u
 
 ```python
 print(string_two[0])
-print(string_two[0])
 print(string_one[:])
 print(string_one[0:4])
 print(string_one[-1])
@@ -37,10 +36,8 @@ This should all be familiar to you as you have seen it with lists. The second la
 
 ```python
 string_three = string_one + string_two
-string_two[0]
 print(string_three)
 string_three = string_one + " " + string_two
-string_two[0]
 print(string_three)
 print(len(string_three))
 ```
@@ -60,8 +57,7 @@ print(string_three)
 # splits the string based on ","
 print(string_three.split(","))
 ['welcome', ' Python Course 101']
-split_string =
-string_three.split(",")
+split_string = string_three.split(",")
 print(split_string)
 print(type(split_string))
 ```
