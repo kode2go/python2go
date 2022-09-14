@@ -19,25 +19,19 @@ You can always recognise a function as it has a `()` at the end of the word!
 
 Let us create our own function. If we were to add two numbers and print the result, we would do it in the following way:
 ```python
->>> 
->>> num1 = 40
->>> num2 = 2
->>> sum = num1 + num2
->>> print(sum)
-42
->>> 
+num1 = 40
+num2 = 2
+sum = num1 + num2
+print(sum)
 ```
 
 But now if we want to do another sum with maybe different numbers we have to write out these 4 lines of code again. Whereas with a function we create a template of what these 4 lines do and makes it generic. Then to use it, we call the function with just need 1 line of code that contains the 2 numbers we want to add, and the function will return the result. How do we do this:
 ```python 
->>> def my_function_sum(number1, number2):
-...  sum_var = number1 + number2
-...  print(sum_var)
-... 
->>> 
->>> my_function_sum(40,2)
-42
->>> 
+def my_function_sum(number1, number2):
+  sum_var = number1 + number2
+  print(sum_var)
+ 
+my_function_sum(40,2)
 ```
 
 Clean, simple, and efficient! 
@@ -98,7 +92,6 @@ import my_sum_module
 print("Start Program")
 
 my_sum_module.sum_func()
-~$
 ```
 Now run the my_main_file.py 
 ```python
@@ -109,32 +102,27 @@ Enter your first number:
 Enter your second number: 
 2
 The answer to: 10 + 2 is: 12.0
-~$
 ```
 So what happened was that Python ran the file called “my_main_file.py” and it first imported the “my_sum_module”, it then printed out “Start Program” and then it executed the function “sum_func” that is within “my_sum_module”. If you have understood this, then you have understood the basic architecture of most Python programs.
 One new feature that we have added at the top of “my_sum_module.py: “ is:
 
-`# This function adds two numbers together`
-
+# This function adds two numbers together`
 Any Python code that starts with the “#” symbol will result in the text after that being a comment. As it has no programming effect, it is just there for information.
 Python has many built in modules that you can also import and install from the internet. For example if you wanted to install the module called “numpy” you would enter the following in the Linux terminal.
-`~$ pip install numpy `
+`pip install numpy `
 
 An example of a built-in module is called “platform” and you can use it like this:
 ```python
->>> import platform
->>> x = platform.system()
->>> print(x)
-Linux
->>> 
+import platform
+x = platform.system()
+print(x)
 ```
 
 You can also give the module an alias with a shorter name like:
 ```python
->>> import platform as plt
->>> x = plt.system()
->>> print(x)
-Linux 
+import platform as plt
+x = plt.system()
+print(x)
 ```
 
 # Plotting
